@@ -1,52 +1,35 @@
 package com.itAcademy;
 
 public abstract class Animal {
+    public Animal() {
+    }
 
-    private final String type;
-    private final String name;
-    private final int run;
-    private final int swim;
-    private final double jump;
-
-    public Animal(String type, String name, int run, int swim, double jump) {
+    public Animal(String type, String name) {
         this.type = type;
         this.name = name;
-        this.run = run;
-        this.swim = swim;
-        this.jump = jump;
     }
+    private String type;
+    private String name;
 
-    public int getMAX_RUN_DISTANCE() {
-        return 0;
-    }
+    public abstract boolean run(int distance);
 
-    public int getMAX_SWIM_DISTANCE() {
-        return 0;
-    }
+    public abstract boolean jump(double height);
 
-    public double getMAX_JUMP_HEIGHT() {
-        return 0;
-    }
+    public abstract boolean swim(int distance);
 
     public String getType() {
         return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getRun() {
-        return run;
+    public void setName(String name) {
+        this.name = name;
     }
-
-    public int getSwim() {
-        return swim;
-    }
-
-    public double getJump() {
-        return jump;
-    }
-
-
 }

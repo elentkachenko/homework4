@@ -1,15 +1,30 @@
 package com.itAcademy;
 
 public class Team {
-    public Team(String teamName) {
-        Team team = new Team("Огонь");
-        Animal[] competitors = new Animal[4];
-        competitors[0] = new Cat("Кот", "Лучик", 199, 0, 1.9);
-        competitors[1] = new Cat("Кот", "Мурзик", 155, 0, 1.2);
-        competitors[2] = new Dog("Собака", "Майя", 450, 9, 0.3);
-        competitors[3] = new Dog("Собака", "Рекс", 300, 30, 0.2);
+    private String nameTeam;
+    private Animal[] animals;
+
+    public Team() {
     }
 
+    public Team(String nameTeam, Animal[] animals) {
+        this.nameTeam = nameTeam;
+        this.animals = animals;
+    }
+
+    public String getNameTeam() {
+        return nameTeam;
+    }
+
+    public void setNameTeam(String nameTeam) {
+        this.nameTeam = nameTeam;
+    }
+
+    public Animal[] getAnimals() {
+        return animals;
+    }
+
+    public void setAnimals(Animal[] animals) {
+        this.animals = animals;
+    }
 }
-
-

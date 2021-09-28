@@ -1,12 +1,42 @@
 package com.itAcademy;
 
-class Cat extends Animal {
-    public Cat(String type, String name, int run, int swim, double jump) {
-        super(type, name, run, swim, jump);
+public class Cat extends Animal {
+    public Cat() {
     }
 
-    final int MAX_RUN_DISTANCE = 200;
-    final int MAX_SWIM_DISTANCE = 0;
-    final double MAX_JUMP_HEIGHT = 2;
+    public Cat(String name) {
+        super("Кот", name);
+    }
+
+    private final int MAX_RUN_DISTANCE = 200;
+    private final int MAX_SWIM_DISTANCE = 0;
+    private final double MAX_JUMP_HEIGHT = 2;
+
+    @Override
+    public boolean run(int distance) {
+        if (distance <= MAX_RUN_DISTANCE) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean jump(double height) {
+        if (height <= MAX_JUMP_HEIGHT) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean swim(int distance) {
+        if (distance <= MAX_SWIM_DISTANCE) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
